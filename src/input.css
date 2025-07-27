@@ -1,0 +1,684 @@
+@import "tailwindcss";
+@layer utilities {
+  .font-sniglet {
+  font-family: "Sniglet", system-ui;
+  }
+  .font-inter {
+    font-family: "Inter", sans-serif;  
+  }
+  .font-abhaya-libre {
+  font-family: "Abhaya Libre", serif;
+  }
+  .font-poppins {
+  font-family: "Poppins", sans-serif;
+  }
+  .font-playfair{
+  font-family: "Playfair Display", serif;
+  }
+
+  .font-ruthie {
+    font-family: "Ruthie", cursive;
+  }
+
+  /* Hide scrollbar for mobile menu */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  /* .scrollbar-hide::-webkit-scrollbar { */
+    /* display: none;  Safari and Chrome */
+  /* } */
+
+  /* Fixed mobile menu positioning */
+  #mobile-menu {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 9999 !important;
+  }
+
+  #mobile-menu > div {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+             /* Mobile and Tablet Styles (below lg) */
+       @media (max-width: 1023px) {
+         .mobile-grid {
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           gap: 1px;
+         }
+
+         .mobile-section {
+           min-height: 200px;
+           background-size: cover;
+           background-position: center;
+           position: relative;
+           overflow: hidden;
+           transition: all 0.3s ease;
+           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+         }
+
+         .mobile-section:hover {
+           transform: translateY(-2px);
+           box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+         }
+
+         .mobile-content {
+           height: 100%;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           position: relative;
+           z-index: 2;
+           padding: 1rem;
+           background: rgba(0, 0, 0, 0.3);
+         }
+
+         .mobile-main-title {
+           grid-column: 1 / -1;
+         }
+
+        .mobile-main-title {
+          background-image: url("assets/images/lamp-ribs.png");
+          min-height: 150px;
+          grid-column: 1 / 3;
+        }
+
+        .mobile-fresh-section {
+          background-image: url("assets/images/Vector.png");
+          background-color: #1d313b;
+          background-blend-mode: saturation;
+          min-height: 180px;
+        }
+
+        .mobile-meat-board {
+          background-image: url("assets/images/raw-lamb.png");
+          min-height: 200px;
+        }
+
+        .mobile-quote-section {
+          background-image: url("assets/images/yellow-smooth.png");
+          min-height: 220px;
+        }
+
+        .mobile-chef-section {
+          background-image: url("assets/images/chef.png");
+          min-height: 250px;
+        }
+
+        .mobile-chicken-section {
+          background-image: url("assets/images/uncooked-chicken.png");
+          min-height: 200px;
+        }
+
+        .mobile-discount-section {
+          /* background-color: #1d313b; */
+          background-image: url("assets/images/yellow-smooth.png");
+          /* background-blend-mode: saturation; */
+          min-height: 160px;
+        }
+
+        .mobile-description-text {
+          background-image: url("assets/images/yellow-smooth.png");
+          min-height: 180px;
+        }
+
+        .mobile-steaks-section {
+          background-image: url("assets/images/front-view-raw-meat.png");
+          min-height: 200px;
+        }
+
+        .mobile-meat-cubes {
+          background-image: url("assets/images/cook-hands.png");
+           min-height: 200px;
+           grid-column: 1 / -1;
+        }
+
+                 .mobile-vegetables-section {
+           background-image: url("assets/images/front-close.png");
+           min-height: 200px;
+           grid-column: 1 / -1;
+         }
+
+        /* Mobile responsive text sizes */
+        .mobile-main-title h1 {
+          font-size: 2.5rem !important;
+          letter-spacing: 0.3em !important;
+        }
+
+        .mobile-feelfood {
+          font-size: 1.8rem !important;
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+
+        .mobile-fresh-text {
+          font-size: 1.8rem !important;
+        }
+
+        .mobile-quote-text {
+          font-size: 0.9rem !important;
+          line-height: 1.4;
+          max-width: 250px;
+          border: 2px solid white;
+          padding: 1rem;
+          background: rgba(0, 0, 0, 0.5);
+        }
+
+        .mobile-discount-text {
+          font-size: 1.5rem !important;
+        }
+
+        .mobile-discount-number {
+          font-size: 2rem !important;
+        }
+
+        .mobile-description {
+          font-size: 0.9rem !important;
+          line-height: 1.5;
+          max-width: 90%;
+          background: rgba(0, 0, 0, 0.5);
+          padding: 1rem;
+          border-radius: 8px;
+        }
+      }
+
+      /* Tablet specific adjustments */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .mobile-grid {
+          grid-template-columns: 1fr 1fr;
+
+        }
+
+        .mobile-section {
+          min-height: 250px;
+        }
+
+        .mobile-main-title {
+          min-height: 200px;
+        }
+      }
+
+             /* Mobile specific adjustments */
+       @media (max-width: 767px) {
+         .mobile-grid {
+           grid-template-columns: 1fr 1fr;
+           gap: 0.5px;
+         }
+
+         .mobile-section {
+           min-height: 180px;
+         }
+
+         .mobile-main-title {
+           min-height: 120px;
+         }
+
+         .mobile-content {
+           padding: 0.5rem;
+         }
+       }
+
+      /* Large screens and above - original grid */
+      @media (min-width: 1024px) {
+        .feelfood-section {
+          position: absolute;
+          left: 31%;
+          top: 155px;
+          transform: translateX(-50%);
+          z-index: 80;
+          pointer-events: none;
+        }
+
+        .feelfood-section p {
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+          font-size: 3rem;
+          font-weight: 400;
+        }
+
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(24, 1fr);
+          grid-template-rows: repeat(20, 60px);
+          height: 100vh;
+        }
+
+        /* Main title - HALAL */
+        .main-title {
+          grid-column: 1 / 25;
+          grid-row: 1 / 4;
+          background-image: url("assets/images/lamp-ribs.png");
+          background-size: cover;
+          background-position: center;
+        }
+
+        /* Fresh Halal Delicious */
+        .fresh-section {
+          grid-column: 1 / 7;
+          grid-row: 4 / 10;
+          background-image: url("assets/images/Vector.png");
+          background-blend-mode: saturation;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        /* Raw meat on cutting board */
+        .meat-board {
+          grid-column: 7 / 13;
+          grid-row: 4 / 10;
+          background-image: url("assets/images/raw-lamb.png");
+          background-size: cover;
+        }
+
+        /* Quote section */
+        .quote-section {
+          grid-column: 13 / 18;
+          grid-row: 4 / 10;
+          background-image: url("assets/images/yellow-smooth.png");
+        }
+
+        .quote-section::after {
+          content: "";
+          position: absolute;
+          top: -30px;
+          left: -40px;
+          border: 2px solid #FFFFFF;
+          z-index: 1000;
+          width: 400px;
+          height: 400px;
+          pointer-events: none;
+          overflow: visible;
+        }
+
+        .quote-section p::before {
+          content: "";
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          width: 267px;
+          height: 256px;
+          border: 2px solid #FFFFFF;
+          padding: 16px;
+        }
+
+        /* Chef working */
+        .chef-section {
+          grid-column: 18 / 25;
+          grid-row: 4 / 15;
+          background-image: url("assets/images/chef.png");
+          background-size: cover;
+        }
+
+        /* Raw chicken */
+        .chicken-section {
+          grid-column: 1 / 7;
+          grid-row: 10 / 20;
+          background-image: url("assets/images/uncooked-chicken.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        /* Discount section */
+        .discount-section {
+          grid-column: 7 / 11;
+          grid-row: 10 / 13;
+          /* background-color: #1D313B; */
+          background-image: url("assets/images/yellow-smooth.png");
+          /* background-blend-mode: saturation; */
+          /* mix-blend-mode: saturation; */
+          /* mix-blend-mode: saturation;  */
+        }
+
+        /* Description text */
+        .description-text {
+          grid-column: 11 / 18;
+          grid-row: 10 / 13;
+          background-image: url("assets/images/yellow-smooth.png");
+        }
+
+        /* Steaks on cutting board */
+        .steaks-section {
+          grid-column: 7 / 13;
+          grid-row: 13 / 20;
+          background-image: url("assets/images/front-view-raw-meat.png");
+          background-size: cover;
+        }
+
+        /* Meat cubes */
+        .meat-cubes {
+          grid-column: 13 / 18;
+          grid-row: 13 / 20;
+          background-image: url("assets/images/cook-hands.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        /* Tomatoes and vegetables */
+        .vegetables-section {
+          grid-column: 18 / 25;
+          grid-row: 15 / 20;
+          background-image: url("assets/images/front-close.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .section {
+          position: relative;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .section:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .section-content {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          z-index: 2;
+        }
+      }
+
+      
+    /* Mobile optimizations */
+    @media (max-width: 767px) {
+      .hero-title {
+        font-size: 2.5rem !important;
+        line-height: 1.1;
+      }
+
+      .hero-description {
+        font-size: 0.9rem !important;
+        line-height: 1.5;
+      }
+
+      .hero-image {
+        max-height: 300px;
+        object-fit: cover;
+      }
+
+      .mobile-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .mobile-buttons button {
+        width: 100%;
+        text-align: center;
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+    }
+
+    /* Tablet optimizations */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .hero-title {
+        font-size: 3.5rem !important;
+        line-height: 1.1;
+      }
+
+      .hero-description {
+        font-size: 1rem !important;
+        line-height: 1.6;
+      }
+
+      .hero-image {
+        max-height: 400px;
+        max-width: 400px;
+        object-fit: cover;
+      }
+
+      .tablet-buttons {
+        gap: 1rem;
+      }
+
+      .tablet-buttons button {
+        padding: 14px 32px;
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Large screen optimizations */
+    @media (min-width: 1024px) {
+      .hero-image-large {
+        position: absolute;
+        right: -12rem;
+        top: -22rem;
+        width: 125rem;
+        height: 62.5rem;
+        object-fit: cover;
+        z-index: 20;
+      }
+
+      .meat-piece {
+        position: absolute;
+        left: -24rem;
+        margin-top: 4rem;
+      }
+      .meat-piece-decoration {
+        filter: drop-shadow(50px 50px 50px rgba(68, 68, 68, 0.25));
+      }
+    }
+    @keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-floating {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* select your halal cuts */
+.slide-transition {
+            transition: all 0.5s ease-in-out;
+        }
+
+        .meat-image {
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            aspect-ratio: 1;
+        }
+
+        .center-highlight {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        .yellow-shape {
+            background: linear-gradient(to bottom, #f1c40f, #f39c12);
+            border-radius: 100px 100px 0 0;
+        }
+
+        @media (max-width: 640px) {
+            .grid-cols-7 {
+                grid-template-columns: 1fr;
+            }
+
+            .meat-image {
+                width: 100px !important;
+                height: 100px !important;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .grid-cols-7 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .meat-image {
+                width: 80px !important;
+                height: 80px !important;
+            }
+        }
+
+        /* Let's Talk About Halal Meat */
+         
+
+        .full-page-map {
+            background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&h=800&fit=crop&crop=center'), linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            position: relative;
+            min-height: 200vh;
+            overflow: hidden;
+        }
+
+        .map-overlay {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(1px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .content-section {
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+        }
+
+        .map-interactive-section {
+            position: relative;
+            z-index: 10;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #prevBtn{
+            border-radius: 50%;
+           background-color: #A29984;
+            animation: pulse 2s infinite;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #nextBtn{
+             border-radius: 50%;
+           background-color: #A29984;
+            animation: pulse 2s infinite;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .location-pin {
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            position: relative;
+            /* animation: pulse 2s infinite; */
+            cursor: pointer;
+            /* transition: all 0.3s ease; */
+        }
+
+        .location-pin:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+                transform: scale(1.05);
+            }
+
+            100% {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        .info-box {
+            backdrop-filter: blur(15px);
+            padding: 16px 20px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .chef-image {
+            background-image: url('assets/images/chef-bg.png');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .read-more-btn {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            transition: all 0.3s ease;
+            border: none;
+            outline: none;
+        }
+
+        .read-more-btn:hover {
+            background: linear-gradient(135deg, #d97706, #b45309);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(217, 119, 6, 0.4);
+        }
+
+        .read-more-btn:active {
+            transform: translateY(0);
+        }
+    
+.content-section {
+  position: relative; 
+}
+
+.content-section::before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  width: 2px;
+  height: 100%;
+  background: #022700;
+}
+        @media (max-width: 768px) {
+            .location-pin {
+                width: 50px;
+                height: 50px;
+            }
+
+            .location-pin::after {
+                height: 30px;
+            }
+
+            .location-pin::before {
+                bottom: -40px;
+            }
+
+            .full-page-map {
+                background-attachment: scroll;
+            }
+
+            
+        }
+}
