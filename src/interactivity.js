@@ -73,13 +73,13 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (nextBtn && prevBtn) {
     const meatImages = [
-      'assets/images/raw-chicken.png', // Raw beef steak
-      'assets/images/raw-chicken.png', // Raw chicken
-      'assets/images/juicy-fresh.png', // Raw meat cuts
-      'assets/images/set-meat-beef.png', // Raw lamb/mutton
-      'assets/images/fresh-beef.png', // Fresh meat
-      'assets/images/raw-chicken.png', // Meat selection
-      'assets/images/raw-chicken.png', // Raw beef steak
+      './src/assets/images/raw-chicken.png', // Raw beef steak
+      './src/assets/images/raw-chicken.png', // Raw chicken
+      './src/assets/images/juicy-fresh.png', // Raw meat cuts
+      './src/assets/images/set-meat-beef.png', // Raw lamb/mutton
+      './src/assets/images/fresh-beef.png', // Fresh meat
+      './src/assets/images/raw-chicken.png', // Meat selection
+      './src/assets/images/raw-chicken.png', // Raw beef steak
     ];
     let currentIndices = [0, 1, 2, 3, 4, 5, 6]; // Initial indices for each position
 
