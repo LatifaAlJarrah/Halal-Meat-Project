@@ -27,7 +27,7 @@
 
     // Add parallax effect to franchise section
     window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
+      // const scrolled = window.pageYOffset;
       const franchiseSection = document.querySelector('.franchise-section');
 
       if (franchiseSection) {
