@@ -67,70 +67,318 @@ document.addEventListener('DOMContentLoaded', function() {
     }, index * 100);
   });
 
-  /* select your halal cuts */
   const nextBtn = document.getElementById('nextBtn');
-  const prevBtn = document.getElementById('prevBtn');
-  
-  if (nextBtn && prevBtn) {
-    const meatImages = [
-      './src/assets/images/raw-chicken.png', // Raw beef steak
-      './src/assets/images/raw-chicken.png', // Raw chicken
-      './src/assets/images/juicy-fresh.png', // Raw meat cuts
-      './src/assets/images/set-meat-beef.png', // Raw lamb/mutton
-      './src/assets/images/fresh-beef.png', // Fresh meat
-      './src/assets/images/raw-chicken.png', // Meat selection
-      './src/assets/images/raw-chicken.png', // Raw beef steak
-    ];
-    let currentIndices = [0, 1, 2, 3, 4, 5, 6]; // Initial indices for each position
+const prevBtn = document.getElementById('prevBtn');
 
-    const positions = [
-      { id: 'img-0', classes: 'w-24 h-24 lg:w-[160px] lg:h-[150px]' },
-      { id: 'img-1', classes: 'w-20 h-20 lg:w-[250px] lg:h-[200px]' },
-      { id: 'img-2', classes: 'w-28 h-28 lg:w-[300px] lg:h-[300px]' },
-      { id: 'img-3', classes: 'w-32 h-32 lg:w-[294px] lg:h-[318px] center-highlight' },
-      { id: 'img-4', classes: 'w-28 h-28 lg:w-[360px] lg:h-[360px]' },
-      { id: 'img-5', classes: 'w-20 h-20 lg:w-[250px] lg:h-[200px]' },
-      { id: 'img-6', classes: 'w-24 h-24 lg:w-[160px] lg:h-[150px]' }
-    ];
+if (nextBtn && prevBtn) {
+  const meatImages = [
+    './src/assets/images/raw-chicken.png', // Raw beef steak
+    './src/assets/images/raw-chicken.png', // Raw chicken
+    './src/assets/images/juicy-fresh.png', // Raw meat cuts
+    './src/assets/images/set-meat-beef.png', // Raw lamb/mutton
+    './src/assets/images/fresh-beef.png', // Fresh meat
+    './src/assets/images/raw-chicken.png', // Meat selection
+    './src/assets/images/raw-chicken.png', // Raw beef steak
+  ];
+  let currentIndices = [0, 1, 2, 3, 4, 5, 6]; // Initial indices for each position
+  const positions = [
+    { id: 'img-0', classes: 'w-24 h-24 lg:w-[160px] lg:h-[150px]' },
+    { id: 'img-1', classes: 'w-20 h-20 lg:w-[250px] lg:h-[200px]' },
+    { id: 'img-2', classes: 'w-28 h-28 lg:w-[300px] lg:h-[300px]' },
+    { id: 'img-3', classes: 'w-32 h-32 lg:w-[294px] lg:h-[318px] center-highlight' },
+    { id: 'img-4', classes: 'w-28 h-28 lg:w-[360px] lg:h-[360px]' },
+    { id: 'img-5', classes: 'w-20 h-20 lg:w-[250px] lg:h-[200px]' },
+    { id: 'img-6', classes: 'w-24 h-24 lg:w-[160px] lg:h-[150px]' }
+  ];
 
-    function updateImages() {
-      positions.forEach((position, index) => {
-        const element = document.getElementById(position.id);
-        if (element) {
-          element.className = `meat-image slide-transition rounded-full ${position.classes} ${index === 3 ? 'center-highlight' : ''}`;
-          element.style.backgroundImage = `url(${meatImages[currentIndices[index]]})`;
-        }
-      });
-    }
-
-    function nextSlide() {
-      const newIndices = [...currentIndices];
-      const lastIndex = newIndices.pop(); // Remove the last image
-      newIndices.unshift(lastIndex); // Move it to the first position
-      currentIndices = newIndices;
-      updateImages();
-    }
-
-    function prevSlide() {
-      const newIndices = [...currentIndices];
-      const firstIndex = newIndices.shift(); // Remove the first image
-      newIndices.push(firstIndex); // Move it to the last position
-      currentIndices = newIndices;
-      updateImages();
-    }
-
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') nextSlide();
-      if (e.key === 'ArrowLeft') prevSlide();
+  function updateImages() {
+    positions.forEach((position, index) => {
+      const element = document.getElementById(position.id);
+      if (element) {
+        element.className = `meat-image slide-transition rounded-full ${position.classes} ${index === 3 ? 'center-highlight' : ''}`;
+        element.style.backgroundImage = `url(${meatImages[currentIndices[index]]})`;
+      }
     });
+  }
 
-    // Initialize
+  function nextSlide() {
+    const newIndices = [...currentIndices];
+    const lastIndex = newIndices.pop(); // Remove the last image
+    newIndices.unshift(lastIndex); // Move it to the first position
+    currentIndices = newIndices;
     updateImages();
   }
 
+  function prevSlide() {
+    const newIndices = [...currentIndices];
+    const firstIndex = newIndices.shift(); // Remove the first image
+    newIndices.push(firstIndex); // Move it to the last position
+    currentIndices = newIndices;
+    updateImages();
+  }
+
+  // Auto-slider functionality
+  let autoSlideInterval = setInterval(nextSlide, 3000); // Auto-slide every 3 seconds
+
+  // Event listeners for manual control
+  nextBtn.addEventListener('click', () => {
+    clearInterval(autoSlideInterval); // Clear the interval
+    nextSlide();
+    autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+  });
+
+  prevBtn.addEventListener('click', () => {
+    clearInterval(autoSlideInterval); // Clear the interval
+    prevSlide();
+    autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+      clearInterval(autoSlideInterval); // Clear the interval
+      nextSlide();
+      autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+    }
+    if (e.key === 'ArrowLeft') {
+      clearInterval(autoSlideInterval); // Clear the interval
+      prevSlide();
+      autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+    }
+  });
+
+  // Initialize
+  updateImages();
+}
+// const nextBtn = document.getElementById('nextBtn');
+// const prevBtn = document.getElementById('prevBtn');
+
+// if (nextBtn && prevBtn) {
+//   const meatImages = [
+//     './src/assets/images/raw-chicken.png', // Raw beef steak
+//     './src/assets/images/raw-chicken.png', // Raw chicken
+//     './src/assets/images/juicy-fresh.png', // Raw meat cuts
+//     './src/assets/images/set-meat-beef.png', // Raw lamb/mutton
+//     './src/assets/images/fresh-beef.png', // Fresh meat
+//     './src/assets/images/raw-chicken.png', // Meat selection
+//     './src/assets/images/raw-chicken.png', // Raw beef steak
+//   ];
+//   let currentIndices = [0, 1, 2, 3, 4, 5, 6]; // Initial indices for each position
+//   const positions = [
+//     { id: 'img-0', classes: 'w-24 h-24 lg:w-[160px] lg:h-[150px]' },
+//     { id: 'img-1', classes: 'w-20 h-20 lg:w-[250px] lg:h-[200px]' },
+//     { id: 'img-2', classes: 'w-28 h-28 lg:w-[300px] lg:h-[300px]' },
+//     { id: 'img-3', classes: 'w-32 h-32 lg:w-[294px] lg:h-[318px] center-highlight' },
+//     { id: 'img-4', classes: 'w-28 h-28 lg:w-[360px] lg:h-[360px]' },
+//     { id: 'img-5', classes: 'w-20 h-20 lg:w-[250px] lg:h-[200px]' },
+//     { id: 'img-6', classes: 'w-24 h-24 lg:w-[160px] lg:h-[150px]' }
+//   ];
+
+//   function updateImages() {
+//     positions.forEach((position, index) => {
+//       const element = document.getElementById(position.id);
+//       if (element) {
+//         // Apply the classes of the new position dynamically
+//         element.className = `meat-image slide-transition rounded-full ${position.classes} ${index === 3 ? 'center-highlight' : ''} animate-slide-in`;
+//         element.style.backgroundImage = `url(${meatImages[currentIndices[index]]})`;
+//         // Remove animation class after transition to reset for next change
+//         setTimeout(() => {
+//           element.classList.remove('animate-slide-in');
+//         }, 500); // Match this with the animation duration
+//       }
+//     });
+//   }
+
+//   function nextSlide() {
+//     const newIndices = [...currentIndices];
+//     const lastIndex = newIndices.pop(); // Remove the last image
+//     newIndices.unshift(lastIndex); // Move it to the first position
+//     currentIndices = newIndices;
+//     updateImages();
+//   }
+
+//   function prevSlide() {
+//     const newIndices = [...currentIndices];
+//     const firstIndex = newIndices.shift(); // Remove the first image
+//     newIndices.push(firstIndex); // Move it to the last position
+//     currentIndices = newIndices;
+//     updateImages();
+//   }
+
+//   // Auto-slider functionality
+//   let autoSlideInterval = setInterval(nextSlide, 3000); // Auto-slide every 3 seconds
+
+//   // Event listeners for manual control
+//   nextBtn.addEventListener('click', () => {
+//     clearInterval(autoSlideInterval); // Clear the interval
+//     nextSlide();
+//     autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+//   });
+
+//   prevBtn.addEventListener('click', () => {
+//     clearInterval(autoSlideInterval); // Clear the interval
+//     prevSlide();
+//     autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+//   });
+
+//   document.addEventListener('keydown', (e) => {
+//     if (e.key === 'ArrowRight') {
+//       clearInterval(autoSlideInterval); // Clear the interval
+//       nextSlide();
+//       autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+//     }
+//     if (e.key === 'ArrowLeft') {
+//       clearInterval(autoSlideInterval); // Clear the interval
+//       prevSlide();
+//       autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+//     }
+//   });
+
+//   // Initialize
+//   updateImages();
+// }
+  // /* select your halal cuts */
+  // const nextBtn = document.getElementById('nextBtn');
+  // const prevBtn = document.getElementById('prevBtn');
+ 
+  // if (nextBtn && prevBtn) {
+  //   const meatImages = [
+  //     './src/assets/images/raw-chicken.png', // Raw beef steak
+  //     './src/assets/images/raw-chicken.png', // Raw chicken
+  //     './src/assets/images/juicy-fresh.png', // Raw meat cuts
+  //     './src/assets/images/set-meat-beef.png', // Raw lamb/mutton
+  //     './src/assets/images/fresh-beef.png', // Fresh meat
+  //     './src/assets/images/raw-chicken.png', // Meat selection
+  //     './src/assets/images/raw-chicken.png', // Raw beef steak
+  //   ];
+  //   let currentIndices = [0, 1, 2, 3, 4, 5, 6]; // Initial indices for each position
+  //   const positions = [
+  //     { id: 'img-0', classes: 'w-24 h-24 lg:w-[160px] lg:h-[150px]' },
+  //     { id: 'img-1', classes: 'w-20 h-20 lg:w-[250px] lg:h-[200px]' },
+  //     { id: 'img-2', classes: 'w-28 h-28 lg:w-[300px] lg:h-[300px]' },
+  //     { id: 'img-3', classes: 'w-32 h-32 lg:w-[294px] lg:h-[318px] center-highlight' },
+  //     { id: 'img-4', classes: 'w-28 h-28 lg:w-[360px] lg:h-[360px]' },
+  //     { id: 'img-5', classes: 'w-20 h-20 lg:w-[250px] lg:h-[200px]' },
+  //     { id: 'img-6', classes: 'w-24 h-24 lg:w-[160px] lg:h-[150px]' }
+  //   ];
+  //   function updateImages() {
+  //     positions.forEach((position, index) => {
+  //       const element = document.getElementById(position.id);
+  //       if (element) {
+  //         element.className = `meat-image slide-transition rounded-full ${position.classes} ${index === 3 ? 'center-highlight' : ''}`;
+  //         element.style.backgroundImage = `url(${meatImages[currentIndices[index]]})`;
+  //       }
+  //     });
+  //   }
+  //   function nextSlide() {
+  //     const newIndices = [...currentIndices];
+  //     const lastIndex = newIndices.pop(); // Remove the last image
+  //     newIndices.unshift(lastIndex); // Move it to the first position
+  //     currentIndices = newIndices;
+  //     updateImages();
+  //   }
+  //   function prevSlide() {
+  //     const newIndices = [...currentIndices];
+  //     const firstIndex = newIndices.shift(); // Remove the first image
+  //     newIndices.push(firstIndex); // Move it to the last position
+  //     currentIndices = newIndices;
+  //     updateImages();
+  //   }
+  //   nextBtn.addEventListener('click', nextSlide);
+  //   prevBtn.addEventListener('click', prevSlide);
+  //   document.addEventListener('keydown', (e) => {
+  //     if (e.key === 'ArrowRight') nextSlide();
+  //     if (e.key === 'ArrowLeft') prevSlide();
+  //   });
+  // // Initialize
+  //   updateImages();
+  // }
+// const nextBtn = document.getElementById('nextBtn');
+// const prevBtn = document.getElementById('prevBtn');
+
+// if (nextBtn && prevBtn) {
+//   const meatImages = [
+//     './src/assets/images/raw-chicken.png', // Raw beef steak
+//     './src/assets/images/raw-chicken.png', // Raw chicken
+//     './src/assets/images/juicy-fresh.png', // Raw meat cuts
+//     './src/assets/images/set-meat-beef.png', // Raw lamb/mutton
+//     './src/assets/images/fresh-beef.png', // Fresh meat
+//     './src/assets/images/raw-chicken.png', // Meat selection
+//     './src/assets/images/raw-chicken.png', // Raw beef steak
+//   ];
+//   let currentIndices = [0, 1, 2, 3, 4, 5, 6]; // Initial indices for each position
+//   const positions = [
+//     { id: 'img-0', classes: 'w-24 h-24 lg:w-[160px] lg:h-[150px]' },
+//     { id: 'img-1', classes: 'w-20 h-20 lg:w-[250px] lg:h-[200px]' },
+//     { id: 'img-2', classes: 'w-28 h-28 lg:w-[300px] lg:h-[300px]' },
+//     { id: 'img-3', classes: 'w-32 h-32 lg:w-[294px] lg:h-[318px] center-highlight' },
+//     { id: 'img-4', classes: 'w-28 h-28 lg:w-[360px] lg:h-[360px]' },
+//     { id: 'img-5', classes: 'w-20 h-20 lg:w-[250px] lg:h-[200px]' },
+//     { id: 'img-6', classes: 'w-24 h-24 lg:w-[160px] lg:h-[150px]' }
+//   ];
+
+//   function updateImages() {
+//     positions.forEach((position, index) => {
+//       const element = document.getElementById(position.id);
+//       if (element) {
+//         // Add animation class to trigger the transition
+//         element.className = `meat-image slide-transition rounded-full ${position.classes} ${index === 3 ? 'center-highlight' : ''} animate-slide-in`;
+//         element.style.backgroundImage = `url(${meatImages[currentIndices[index]]})`;
+//         // Remove animation class after transition to reset for next change
+//         setTimeout(() => {
+//           element.classList.remove('animate-slide-in');
+//         }, 500); // Match this with the animation duration
+//       }
+//     });
+//   }
+
+//   function nextSlide() {
+//     const newIndices = [...currentIndices];
+//     const lastIndex = newIndices.pop(); // Remove the last image
+//     newIndices.unshift(lastIndex); // Move it to the first position
+//     currentIndices = newIndices;
+//     updateImages();
+//   }
+
+//   function prevSlide() {
+//     const newIndices = [...currentIndices];
+//     const firstIndex = newIndices.shift(); // Remove the first image
+//     newIndices.push(firstIndex); // Move it to the last position
+//     currentIndices = newIndices;
+//     updateImages();
+//   }
+
+//   // Auto-slider functionality
+//   let autoSlideInterval = setInterval(nextSlide, 3000); // Auto-slide every 3 seconds
+
+//   // Event listeners for manual control
+//   nextBtn.addEventListener('click', () => {
+//     clearInterval(autoSlideInterval); // Clear the interval
+//     nextSlide();
+//     autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+//   });
+
+//   prevBtn.addEventListener('click', () => {
+//     clearInterval(autoSlideInterval); // Clear the interval
+//     prevSlide();
+//     autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+//   });
+
+//   document.addEventListener('keydown', (e) => {
+//     if (e.key === 'ArrowRight') {
+//       clearInterval(autoSlideInterval); // Clear the interval
+//       nextSlide();
+//       autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+//     }
+//     if (e.key === 'ArrowLeft') {
+//       clearInterval(autoSlideInterval); // Clear the interval
+//       prevSlide();
+//       autoSlideInterval = setInterval(nextSlide, 3000); // Restart the interval
+//     }
+//   });
+
+//   // Initialize
+//   updateImages();
+// }
 
   /* Let's Talk About Halal Meat */
   
@@ -228,3 +476,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+   
