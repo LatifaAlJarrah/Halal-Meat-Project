@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateImages();
   }
 
+
   /* Let's Talk About Halal Meat */
   
   // Smooth scrolling for read more button
