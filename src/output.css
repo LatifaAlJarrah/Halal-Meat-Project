@@ -1642,6 +1642,11 @@
       max-width: 1600px;
     }
   }
+  .\32 xl\:min-w-4xl {
+    @media (width >= 96rem) {
+      min-width: var(--container-4xl);
+    }
+  }
 }
 @layer utilities {
   .font-sniglet {
