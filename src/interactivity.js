@@ -477,3 +477,22 @@ if (nextBtn && prevBtn) {
   });
 });
    
+/*  review section */
+  // Generate stars for existing reviews
+    function generateStars(containerId, rating) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+
+      for (let i = 1; i <= 5; i++) {
+        const star = document.createElement('span');
+        star.innerHTML = '★';
+        star.className = i <= rating ? 'text-[#fbbf24] text-lg' : 'text-[#d1d5db] text-lg';
+        container.appendChild(star);
+      }
+    }
+
+    // Initialize review stars
+    generateStars('stars-1', 5);
+    generateStars('stars-2', 4);
+
+
