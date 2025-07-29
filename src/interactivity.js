@@ -76,7 +76,7 @@ if (nextBtn && prevBtn) {
     './src/assets/images/raw-chicken-pieces.png', // Raw chicken
     './src/assets/images/juicy-fresh.png', // Raw meat cuts
     './src/assets/images/set-meat-beef.png', // Raw lamb/mutton
-    './src/assets/images/fresh-beef.png', // Fresh meat
+    './src/assets/images/juicy-fresh.png', // Fresh meat
     './src/assets/images/raw-chicken-pieces.png', // Meat selection
     './src/assets/images/raw-chicken-pieces.png', // Raw beef steak
   ];
