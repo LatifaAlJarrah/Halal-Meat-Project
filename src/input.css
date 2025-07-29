@@ -15,11 +15,12 @@
   .font-playfair{
   font-family: "Playfair Display", serif;
   }
-
   .font-ruthie {
     font-family: "Ruthie", cursive;
   }
-
+  .font-lato {
+    font-family: "Lato", sans-serif;
+  }
 
   /* Fixed mobile menu positioning */
   #mobile-menu {
@@ -229,6 +230,8 @@
           pointer-events: none;
         }
 
+        
+
         .feelfood-section p {
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
           font-size: 3rem;
@@ -382,6 +385,18 @@
           z-index: 2;
         }
       }
+
+         @media (min-width: 1689px) and (max-width: 6144px) {
+    .hero-gradient {
+      width: 37vw;
+    }
+  }
+      @media (max-width: 1520.8px) {
+    .hero-gradient {
+      width: 22vw;
+    }
+  }
+     
 
       
     /* Mobile optimizations */
@@ -618,65 +633,6 @@
       margin: 2rem auto;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     }
-  /* .slide-transition {
-    transition: all 0.5s ease-in-out;
-  }
-
-  @keyframes slideHorizontal {
-    0% {
-      transform: translateX(100%); 
-      opacity: 0.5; 
-    }
-    50% {
-      transform: translateX(0); 
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(0); 
-      opacity: 1;
-    }
-  }
-
-  .animate-slide-horizontal {
-    animation: slideHorizontal 0.5s ease-in-out forwards; 
-  }
-
-  .meat-image {
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    aspect-ratio: 1;
-  }
-
-  .center-highlight {
-    transform: scale(1.1);
-    z-index: 10;
-  }
-
-  .yellow-shape {
-    background: linear-gradient(to bottom, #f1c40f, #f39c12);
-    border-radius: 100px 100px 0 0;
-  }
-
-  @media (max-width: 640px) {
-    .grid-cols-7 {
-      grid-template-columns: 1fr;
-    }
-    .meat-image {
-      width: 100px !important;
-      height: 100px !important;
-    }
-  }
-
-  @media (min-width: 641px) and (max-width: 1024px) {
-    .grid-cols-7 {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    .meat-image {
-      width: 80px !important;
-      height: 80px !important;
-    }
-  }
 
   /* Mobile Carousel Styles */
   .mobile-carousel {
@@ -753,14 +709,20 @@
          
 
         .full-page-map {
-            background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&h=800&fit=crop&crop=center'), linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
             position: relative;
-            /* min-height: 200vh; */
+            min-height: 600px;
             overflow: hidden;
+        }
+
+        .map-gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, #FAFAFA, #FFFFFF00);
+            z-index: 1;
+            pointer-events: none;
         }
 
         .map-overlay {
