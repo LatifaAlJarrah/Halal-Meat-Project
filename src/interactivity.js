@@ -246,7 +246,45 @@ if (nextBtn && prevBtn) {
     }
   });
 });
-   
+   // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerBtn = document.getElementById('hamburger-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeBtn = document.getElementById('close-menu');
+
+            // Open mobile menu
+            hamburgerBtn.addEventListener('click', function () {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                document.body.style.overflow = 'hidden'; // Prevent background scroll
+            });
+
+            // Close mobile menu
+            closeBtn.addEventListener('click', function () {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = 'auto'; // Restore background scroll
+            });
+
+            // Close menu when clicking outside
+            mobileMenu.addEventListener('click', function (e) {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close menu when pressing Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }); 
+
 /*  review section */
   // Generate stars for existing reviews
     function generateStars(containerId, rating) {

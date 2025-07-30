@@ -40,7 +40,7 @@
 
 <body>
     <!-- Header -->
-    <header class="relative">
+    <header class="relative shadow-[0_4px_4px_0_rgba(0,0,0,0.04)] mb-10">
         <div class="flex items-center justify-between px-6 lg:px-16 py-4 2xl:max-w-[1600px] mx-auto">
             <!-- Logo -->
             <div class="flex-shrink-0 ">
@@ -56,7 +56,7 @@
                 <a href="build-your-box.html"
                     class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Build Your
                     Box</a>
-                <a href="#" class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">About</a>
+                <a href="about.html" class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">About</a>
                 <a href="shop.html" class="text-black hover:text-[#E28A25] transition-colors font-extrabold font-inter">Shop</a>
                 <a href="products.html"
                     class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Product</a>
@@ -149,7 +149,7 @@
                         class="block text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Build
                         Your
                         Box</a>
-                    <a href="#"
+                    <a href="about.html"
                         class="block text-black hover:text-[#E28A25] transition-colors font-medium font-inter">About</a>
                     <a href="shop.html"
                         class="block text-black hover:text-[#E28A25] transition-colors font-extrabold font-inter">Shop</a>
@@ -387,6 +387,7 @@
         </div>
     </footer>
 
+    <script src="./src/interactivity.js"></script>
     <script>
         // Product data matching the meat theme
         const products = [
@@ -653,46 +654,6 @@
                 }
             });
         });
-
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburgerBtn = document.getElementById('hamburger-menu');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const closeBtn = document.getElementById('close-menu');
-
-            // Open mobile menu
-            hamburgerBtn.addEventListener('click', function () {
-                mobileMenu.classList.remove('hidden');
-                mobileMenu.classList.add('flex');
-                document.body.style.overflow = 'hidden'; // Prevent background scroll
-            });
-
-            // Close mobile menu
-            closeBtn.addEventListener('click', function () {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-                document.body.style.overflow = 'auto'; // Restore background scroll
-            });
-
-            // Close menu when clicking outside
-            mobileMenu.addEventListener('click', function (e) {
-                if (e.target === mobileMenu) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-
-            // Close menu when pressing Escape key
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
-
         // Initialize
         renderProducts();
     </script>

@@ -130,7 +130,7 @@
 
 <body>
     <!-- Header -->
-    <header class="relative">
+    <header class="relative shadow-[0_4px_4px_0_rgba(0,0,0,0.04)] mb-10">
         <div class="flex items-center justify-between px-6 lg:px-16 py-4 2xl:max-w-[1600px] mx-auto">
             <!-- Logo -->
             <div class="flex-shrink-0 ">
@@ -299,11 +299,6 @@
 
                 <!-- Mobile Login Button -->
                 <div class="p-6 border-t">
-                    <!-- <button
-                          class="w-full text-[#E28A25] font-inter px-4 py-3 rounded-lg font-normal border border-[#E28A25] hover:bg-[#E28A25] hover:text-white transition-colors">
-                          Login
-                      </button> -->
-
                     <button
                         class="w-full text-black font-inter px-4 py-3 rounded-lg font-normal border border-black hover:bg-black hover:text-white transition-colors">
                         Login
@@ -312,8 +307,9 @@
             </div>
         </div>
     </header>
+
     <!-- About Section -->
-    <section class="py-16 md:py-24 px-4 md:px-8">
+    <section class="py-24 lg:py-4 px-12 md:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -445,7 +441,7 @@
     </section>
 
     <!-- Let's Talk About Halal Meat Section -->
-    <section class="py-8 relative  2xl:max-w-[1600px] mx-auto">
+    <section class="py-8 relative px-12 2xl:max-w-[1600px] mx-auto">
         <div class="mx-6 lg:mx-0 pl-0 lg:pl-24">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
 
@@ -459,7 +455,7 @@
                         <div
                             class="space-y-4 text-black text-sm lg:text-lg leading-relaxed font-poppins font-normal max-w-xl content-section">
                             <p>
-                                Halal Harvest is more than just a meal – it's a journey into
+                                Halal Harvest is more than just a meal - it's a journey into
                                 the heart of tradition, flavor, and mindful eating. Every cut of
                                 meat we serve tells a story of care, ethics, and respect for
                                 both food and faith. From the rich spices of Middle Eastern
@@ -496,7 +492,7 @@
     </section>
 
     <!-- Why Choose Us? Section -->
-    <section class="py-16 lg:py-24 relative 2xl:max-w-[1600px] mx-auto ">
+    <section class="py-16 lg:py-24 px-12 relative 2xl:max-w-[1600px] mx-auto ">
         <div class="mx-6 lg:mx-0 pl-0 lg:pl-24">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8 order-2 lg:order-1">
@@ -540,7 +536,7 @@
     </section>
 
     <!-- From Our Family to Yours Section -->
-    <section class="py-8 lg:py-24 2xl:max-w-[1600px] mx-auto relative px-4 lg:px-24">
+    <section class="py-8 lg:py-24 2xl:max-w-[1600px] mx-auto relative px-12 lg:px-24">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
             <div class="relative z-10">
                 <h2
@@ -576,7 +572,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-br from-[#DA9500] to-[#DA5400] text-white mt-20 lg:mt-40">
+    <footer class="bg-gradient-to-br from-[#DA9500] to-[#DA5400] text-white mt-0 lg:mt-40">
         <div class="container mx-auto px-8 py-12 2xl:max-w-[1600px] mx-auto">
             <!-- Main footer content -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
@@ -652,6 +648,7 @@
         </div>
     </footer>
 
+    <script src="./src/interactivity.js"></script>
     <script>
         // Dish selection functionality
         const dishItems = document.querySelectorAll('.dish-item');
@@ -882,46 +879,6 @@
                 mainContainer.addEventListener('mouseenter', stopAutoPlay);
                 mainContainer.addEventListener('mouseleave', startAutoPlay);
             }
-        });
-
-
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburgerBtn = document.getElementById('hamburger-menu');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const closeBtn = document.getElementById('close-menu');
-
-            // Open mobile menu
-            hamburgerBtn.addEventListener('click', function () {
-                mobileMenu.classList.remove('hidden');
-                mobileMenu.classList.add('flex');
-                document.body.style.overflow = 'hidden'; // Prevent background scroll
-            });
-
-            // Close mobile menu
-            closeBtn.addEventListener('click', function () {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-                document.body.style.overflow = 'auto'; // Restore background scroll
-            });
-
-            // Close menu when clicking outside
-            mobileMenu.addEventListener('click', function (e) {
-                if (e.target === mobileMenu) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-
-            // Close menu when pressing Escape key
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('flex');
-                    document.body.style.overflow = 'auto';
-                }
-            });
         });
 
     </script>
