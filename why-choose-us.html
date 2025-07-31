@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halal Meat - Why Choose Us</title>
     <link href="./src/output.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="2xl:max-w-[1600px] mx-auto">
     <!-- Header -->
-    <header class="relative shadow-[0_4px_4px_0_rgba(0,0,0,0.04)] mb-10">
+    <header class="relative shadow-[0_4px_4px_0_rgba(0,0,0,0.04)] mb-10" data-aos="fade-down" data-aos-duration="1000">
         <div class="flex items-center justify-between px-6 lg:px-16 py-4 2xl:max-w-[1600px] mx-auto">
             <!-- Logo -->
             <div class="flex-shrink-0 ">
@@ -27,16 +29,17 @@
                     class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Build Your
                     Box</a>
                 <a href="about.html"
-                    class="text-black hover:text-[#E28A25] transition-colors font-semibold font-inter">About</a>
+                    class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">About</a>
                 <a href="shop.html"
                     class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Shop</a>
                 <a href="products.html"
                     class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Product</a>
                 <a href="#"
                     class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Checkout</a>
-                <a href="#" class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Why Choose
+                <a href="why-choose-us.html"
+                    class="text-black hover:text-[#E28A25] transition-colors font-semibold font-inter">Why Choose
                     Us</a>
-                <a href="#" class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Contact
+                <a href="contact.html" class="text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Contact
                     Us</a>
             </nav>
 
@@ -122,18 +125,18 @@
                         Your
                         Box</a>
                     <a href="about.html"
-                        class="block text-black hover:text-[#E28A25] transition-colors font-semibold font-inter">About</a>
+                        class="block text-black hover:text-[#E28A25] transition-colors font-medium font-inter">About</a>
                     <a href="shop.html"
                         class="block text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Shop</a>
                     <a href="products.html"
                         class="block text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Product</a>
                     <a href="#"
                         class="block text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Checkout</a>
-                    <a href="#"
-                        class="block text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Why
+                    <a href="why-choose-us.html"
+                        class="block text-black hover:text-[#E28A25] transition-colors font-semibold font-inter">Why
                         Choose
                         Us</a>
-                    <a href="#"
+                    <a href="contact.html"
                         class="block text-black hover:text-[#E28A25] transition-colors font-medium font-inter">Contact
                         Us</a>
                 </nav>
@@ -189,31 +192,362 @@
     </header>
 
     <!-- Our Mission Section -->
-    <section class="py-24 lg:py-4 px-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
-            <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <section class="py-4 px-8 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-20">
+            <div class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 order-2 md:order-1" data-aos="fade-right" data-aos-duration="1200"
+                data-aos-delay="200" data-aos-mobile="true">
                 <img src="./src/assets/images/chef-holding.jpg" alt="Chef Holding"
-                    class="w-full lg:w-[450px] h-full lg:h-[100vh] 3xl:h-[50vh] object-cover rounded-xl">
+                    class="w-full lg:w-[450px] h-full lg:h-[100vh] 3xl:h-[40vh] object-cover rounded-xl">
                 <div class="flex flex-col gap-4">
                     <img src="./src/assets/images/high-angle-raw-chicken.jpg" alt="Raw Chicken"
-                        class="w-full h-[60vh] 3xl:h-[25vh] object-cover rounded-xl object-bottom">
+                        class="w-full h-[60vh] 3xl:h-[20vh] object-cover rounded-xl object-bottom">
                     <img src="./src/assets/images/top-view-seasoned.jpg" alt="Seasoned Chicken"
-                        class="w-full h-[70vh] 3xl:h-[30vh] object-cover rounded-xl">
+                        class="w-full h-[70vh] 3xl:h-[25vh] object-cover rounded-xl">
                 </div>
             </div>
-            <div class="flex flex-col gap-4 col-span-1 justify-center text-justify ">
+            <div class="flex flex-col gap-4 col-span-1 justify-center text-justify w-full order-1 md:order-2" data-aos="fade-left"
+                data-aos-duration="1200" data-aos-delay="400" data-aos-mobile="true">
                 <h2 class="text-2xl lg:text-[55px] font-extrabold text-[#2C2F24] font-abhaya-libre">Our Mission</h2>
-                <p class="font-normal text-lg lg:text-2xl leading-10 text-[#414536]">Halal Meat — The Solution to
-                    Limited Halal Access.
-                    We understand the challenges faced by those seeking Halal products
+                <p class="font-normal text-lg lg:text-2xl leading-10 text-[#414536] leading-[39px]">Halal Meat — The
+                    Solution to
+                    Limited Halal Access. We understand the challenges faced by those seeking Halal products
                     and have taken it upon ourselves to make it easier for everyone. With our trusted and certified
                     Halal delivery service,
                     you can now access a wide range of Halal products with ease.
-                </p>
             </div>
         </div>
     </section>
+
+    <!-- How it started Section -->
+    <section class="py-8 lg:py-4 px-8 lg:px-12 my-8 lg:my-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
+            <!-- Text Content -->
+            <div class="flex flex-col gap-4 justify-center text-justify order-1" data-aos="fade-right"
+                data-aos-duration="1200" data-aos-delay="200" data-aos-mobile="true">
+                <h2 class="text-2xl lg:text-[55px] font-extrabold text-[#2C2F24] font-abhaya-libre">How it Started</h2>
+                <p class="font-normal text-lg xl:text-2xl leading-6 lg:leading-10 text-[#414536]">Halal
+                    Meat — The Solution to
+                    Our story began with a vision to create a unique dining experience that merges fine dining,
+                    exceptional service, and a
+                    vibrant ambiance. Rooted in city's rich culinary culture, we aim to honor our local roots while
+                    infusing a global
+                    palate.
+                </p>
+                <p class="font-normal text-lg xl:text-2xl leading-6 lg:leading-10 text-[#414536]">
+                    At place, we believe that dining is not just about food, but also about the overall experience. Our
+                    staff, renowned for
+                    their warmth and dedication, strives to make every visit an unforgettable event.
+                </p>
+            </div>
+
+            <!-- Images Container -->
+            <div class="relative order-2" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400"
+                data-aos-mobile="true">
+                <!-- Main Image -->
+                <div class="relative w-full h-[300px] md:h-[400px] lg:h-[500px] mb-4 md:mb-0">
+                    <img src="./src/assets/images/raw-lamb-chops.png" alt="Raw Lamb Chops"
+                        class="w-full h-full object-cover rounded-xl">
+                </div>
+
+                <!-- Overlapping Image - Hidden on mobile, shown on larger screens -->
+                <div class="hidden md:block absolute -bottom-10 lg:-bottom-20 right-0">
+                    <img src="./src/assets/images/lamp-ribs-with-rosemary.jpg" alt="Lamp Ribs with Rosemary"
+                        class="w-[250px] lg:w-[400px] h-[200px] lg:h-[300px] object-cover rounded-xl shadow-lg">
+                </div>
+
+                <!-- Mobile version of second image - shown below main image on mobile -->
+                <div class="md:hidden w-full h-[200px] mt-4">
+                    <img src="./src/assets/images/lamp-ribs-with-rosemary.jpg" alt="Lamp Ribs with Rosemary"
+                        class="w-full h-full object-cover rounded-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works Section -->
+    <section class="lg:pt-4 px-8 lg:px-12 mt-0 lg:mt-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
+            <div class="order-2 md:order-1" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200" data-aos-mobile="true">
+                <img src="./src/assets/images/excursion-production.png" alt="Excursion Production"
+                    class="w-full h-full object-cover">
+            </div>
+            <div class="space-y-4 leading-relaxed max-w-xl py-0 lg:py-12 text-justify order-1 md:order-2" data-aos="fade-left"
+                data-aos-duration="1200" data-aos-delay="400" data-aos-mobile="true">
+                <h2 class="text-3xl lg:text-[55px] font-extrabold text-[#2C2F24] font-abhaya-libre mb-10">How it Works
+                </h2>
+                <div class="space-y-6 lg:space-y-14 leading-relaxed font-poppins content-section">
+                    <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" data-aos-mobile="true">
+                        <h3 class="font-poppins font-bold text-lg lg:text-2xl">1. Customize Your Order</h3>
+                        <p class="font-poppins font-normal text-base sm:text-base lg:text-lg text-[#022700]">Explore our
+                            diverse selection of
+                            premium meats sourced from trusted suppliers. Browse through
+                            a variety of cuts, portion
+                            sizes, and specialty items. Personalize your order to suit your preferences, choosing
+                            exactly what you crave or
+                            discovering something new.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" data-aos-mobile="true">
+                        <h3 class="font-poppins font-bold text-lg lg:text-2xl">2. Expert Preparation</h3>
+                        <p class="font-poppins font-normal text-base sm:text-base lg:text-lg text-[#022700]">Explore our
+                            diverse selection of
+                            Once you've finalized your selections, our skilled team of butchers and packers takes over.
+                            They meticulously prepare
+                            your order with precision and care, ensuring each cut maintains its freshness and quality.
+                            Our commitment to excellence
+                            means your meats are handled expertly at every stage.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000" data-aos-mobile="true">
+                        <h3 class="font-poppins font-bold text-lg lg:text-2xl">3. Convenient Delivery</h3>
+                        <p class="font-poppins font-normal text-base sm:text-base lg:text-lg text-[#022700]">Explore our
+                            diverse selection of
+                            Relax as we take care of delivering your order directly to your doorstep. Our efficient
+                            delivery service ensures prompt
+                            arrival, packaged to preserve peak freshness. Sit back, knowing your premium meats will
+                            arrive on time and in perfect
+                            condition, ready for your culinary adventures</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="1200" data-aos-mobile="true">
+                        <h3 class="font-poppins font-bold text-lg lg:text-2xl">4. Repeat and Enjoy</h3>
+                        <p class="font-poppins font-normal text-base sm:text-base lg:text-lg text-[#022700]">Explore our
+                            diverse selection of
+                            With your premium cuts in hand, it's time to savor exceptional meals. Cook up your favorite
+                            recipes, experiment with new
+                            flavors, and relish in the satisfaction of top-quality meats. Love what you received? Easily
+                            reorder your favorites,
+                            making enjoying exceptional meats a seamless part of your routine.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="px-8 lg:px-30 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-20">
+            <div class="flex flex-col space-y-4 p-4 lg:p-10 hover:bg-[#E5AF1050] rounded-xl" data-aos="zoom-in"
+                data-aos-duration="1000" data-aos-delay="200" data-aos-mobile="true">
+                <svg width="72" height="90" viewBox="0 0 72 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_157_448)">
+                        <path
+                            d="M71.9738 35.7242C71.8886 43.2575 69.7455 49.9172 66.4257 56.2413C61.4936 65.6424 54.7439 73.6414 47.0678 80.8769C43.9157 83.8512 40.5258 86.5776 37.2186 89.3892C36.2547 90.2054 35.7439 90.1953 34.7976 89.4518C24.3274 81.2374 15.054 71.9039 7.9688 60.5575C4.33856 54.7441 1.53701 48.5702 0.480488 41.7253C-1.19443 30.8596 1.50196 21.1431 8.54964 12.7284C14.2704 5.90359 21.621 1.70252 30.4212 0.438194C43.1696 -1.39195 54.0604 2.50368 62.7655 12.0174C68.9444 18.7772 71.8536 26.9014 71.9738 35.7242ZM8.97776 35.8844C8.95523 50.7659 20.9951 62.9235 35.789 62.966C39.3489 62.9835 42.8771 62.2978 46.1714 60.9484C49.4656 59.5989 52.4609 57.6122 54.9855 55.1024C57.51 52.5925 59.5141 49.6087 60.8827 46.3224C62.2513 43.0361 62.9575 39.5119 62.9607 35.952C62.9858 21.1807 50.8983 9.01058 36.1445 8.97052C21.1554 8.93046 9.01281 20.9704 8.97776 35.8844Z"
+                            fill="#DA9500" />
+                        <path
+                            d="M41.9685 43.4653C41.9685 41.4975 41.946 39.5271 41.9835 37.5593C42.0058 37.3029 41.9557 37.0454 41.8388 36.8162C41.722 36.5869 41.5431 36.395 41.3226 36.2624C36.6884 32.9226 36.105 25.7097 40.1083 21.6263C42.8748 18.8022 46.9432 18.7571 49.7222 21.5211C53.8382 25.607 53.2849 32.9251 48.5831 36.2924C48.3754 36.4173 48.2067 36.5975 48.0957 36.8128C47.9847 37.0282 47.9358 37.2702 47.9547 37.5117C47.978 41.4791 47.978 45.4473 47.9547 49.4164C47.974 50.0632 47.78 50.6985 47.4027 51.2242C47.0254 51.7499 46.4856 52.1369 45.8666 52.3256C45.2692 52.5355 44.6186 52.5385 44.0193 52.3342C43.42 52.1299 42.9067 51.7301 42.5619 51.199C42.2137 50.6158 42.0167 49.9549 41.9885 49.2762C41.9209 47.3409 41.9685 45.4031 41.9685 43.4653Z"
+                            fill="#DA9500" />
+                        <path
+                            d="M23.9745 37.5267C21.6912 37.2513 20.1465 36.1522 19.5857 33.899C19.5179 33.6263 19.4834 33.3463 19.4831 33.0653C19.4831 29.0996 19.4455 25.1338 19.5131 21.1681C19.5422 20.8727 19.6324 20.5866 19.7781 20.3279C19.9238 20.0693 20.1217 19.8439 20.3593 19.6659C21.3282 19.0325 22.4523 19.8537 22.4674 21.1406C22.4899 23.2661 22.4674 25.3967 22.4674 27.5123V28.4035H25.4717V22.0469C25.4717 21.7039 25.4567 21.3584 25.4717 21.0154C25.5243 20.1141 26.1051 19.5132 26.9188 19.4782C27.1249 19.468 27.3308 19.5013 27.5231 19.5758C27.7155 19.6504 27.8901 19.7646 28.0355 19.9109C28.1809 20.0573 28.2939 20.2326 28.3672 20.4254C28.4406 20.6183 28.4725 20.8244 28.461 21.0304C28.4886 23.2461 28.461 25.4643 28.461 27.6825V28.4086H31.4654V26.9665C31.4654 25.0312 31.4654 23.0934 31.4654 21.1581C31.4654 20.1316 32.0863 19.4832 32.9675 19.4907C33.8488 19.4982 34.4422 20.1266 34.4472 21.088C34.4622 25.1163 34.4822 29.1446 34.4472 33.1729C34.4192 34.1313 34.078 35.0542 33.4757 35.8002C32.8734 36.5463 32.0433 37.0745 31.1124 37.3039C30.7568 37.3965 30.3938 37.4566 29.9732 37.5543V43.9134C29.9732 45.7561 29.9932 47.6013 29.9732 49.4414C29.9848 49.8414 29.916 50.2397 29.7709 50.6127C29.6258 50.9856 29.4074 51.3257 29.1286 51.6127C28.8497 51.8997 28.5161 52.1279 28.1475 52.2837C27.7789 52.4395 27.3828 52.5198 26.9826 52.5198C26.5825 52.5198 26.1864 52.4395 25.8178 52.2837C25.4492 52.1279 25.1156 51.8997 24.8367 51.6127C24.5579 51.3257 24.3395 50.9856 24.1944 50.6127C24.0493 50.2397 23.9805 49.8414 23.9921 49.4414C23.9695 45.8187 23.9921 42.1935 23.9921 38.5707L23.9745 37.5267Z"
+                            fill="#DA9500" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_157_448">
+                            <rect width="71.974" height="90" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <h4 class="font-poppins font-semibold text-2xl lg:text-[30px] text-[#3F3F3F]">Wide selection of
+                    restaurants</h4>
+                <p class="font-poppins font-normal text-base lg:text-xl text-[#676767]">Lorem ipsum dolor sit amet
+                    consectetur.
+                    Ornare massa nunc nibh tristique.</p>
+            </div>
+            <div class="flex flex-col space-y-4 p-4 lg:p-10 hover:bg-[#E5AF1050] rounded-xl" data-aos="zoom-in"
+                data-aos-duration="1000" data-aos-delay="400" data-aos-mobile="true">
+                <svg width="72" height="90" viewBox="0 0 72 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_157_452)">
+                        <path
+                            d="M7.54199 37.5818C1.67536 36.7018 -0.650764 33.1818 0.155898 26.356H71.3592C71.2243 28.2949 71.3592 30.2749 70.8928 32.1053C70.1771 34.9476 68.1414 36.6842 65.252 37.3354C64.7915 37.438 64.3222 37.4938 63.7619 37.5876V38.8871C63.7619 53.8177 63.7619 68.7502 63.7619 83.6847C63.7619 87.7268 61.4886 89.9972 57.4348 89.9972H13.8486C9.81237 89.9972 7.54492 87.7121 7.54492 83.6583C7.54492 68.761 7.54492 53.8646 7.54492 38.9692L7.54199 37.5818ZM24.3792 35.0532C20.9824 38.3092 16.6001 38.362 13.2326 35.1178C11.323 35.7866 11.2438 37.2532 11.2526 38.978C11.3142 50.503 11.2849 62.028 11.2849 73.5559V74.9229H60.019V71.573C60.019 60.1937 60.019 48.8144 60.019 37.4351C60.019 36.7458 59.8899 36.2618 59.2475 35.9127C58.855 35.6482 58.4895 35.3456 58.1563 35.0092C54.6833 38.3591 50.3009 38.3004 46.9071 35.0474C43.4135 38.2975 39.2189 38.3503 35.6373 35.0767C32.0792 38.3474 27.8845 38.3122 24.3792 35.0532ZM35.6549 84.3329C36.8634 84.3329 38.069 84.3535 39.2775 84.3329C40.4333 84.3095 41.2135 83.5879 41.2575 82.573C41.3015 81.558 40.5125 80.6458 39.3245 80.6252C36.8742 80.5881 34.4229 80.5881 31.9706 80.6252C31.7218 80.6154 31.4735 80.6557 31.2405 80.7436C31.0075 80.8315 30.7946 80.9654 30.6143 81.1372C30.434 81.309 30.29 81.5153 30.191 81.7438C30.0919 81.9723 30.0398 82.2183 30.0376 82.4674C30.0229 83.5322 30.8325 84.3183 32.0322 84.3447C33.232 84.3711 34.4464 84.3388 35.6549 84.3388V84.3329Z"
+                            fill="#DA9500" />
+                        <path
+                            d="M63.7611 11.1935H7.59985C7.59985 9.02288 7.42385 6.89036 7.64385 4.80184C7.94598 1.93892 10.3836 0.0234665 13.4108 0C18.4238 0 23.4368 0 28.4528 0H57.4281C61.4995 0 63.7582 2.24985 63.7641 6.29783L63.7611 11.1935ZM35.5426 7.49462C36.7864 7.49462 38.0301 7.51809 39.2738 7.49462C40.4471 7.46822 41.2098 6.75249 41.2567 5.73463C41.3037 4.71677 40.5234 3.80744 39.3266 3.78398C36.8744 3.74096 34.4231 3.74096 31.9728 3.78398C31.7146 3.77386 31.4571 3.81765 31.2168 3.91256C30.9765 4.00747 30.7586 4.15141 30.577 4.33522C30.3954 4.51902 30.2541 4.73865 30.1621 4.9801C30.0701 5.22155 30.0294 5.47952 30.0427 5.73757C30.0925 6.76423 30.8611 7.47409 32.0285 7.49755C33.196 7.52102 34.3722 7.49462 35.5426 7.49462Z"
+                            fill="#DA9500" />
+                        <path
+                            d="M0.973633 22.434C2.36109 20.3455 3.72802 18.4154 4.95121 16.3943C5.59361 15.3325 6.33573 14.9746 7.59119 14.9776C26.4348 15.0206 45.2794 15.0206 64.125 14.9776C65.093 14.9776 65.6415 15.2709 66.146 16.0805C67.466 18.1866 68.8682 20.2399 70.3348 22.434H0.973633Z"
+                            fill="#DA9500" />
+                        <path
+                            d="M49.3651 58.0795H21.8535C21.965 57.6249 22.0354 57.1996 22.1674 56.8153C23.9274 51.6615 27.4473 48.4319 32.7508 47.2057C33.5633 47.018 33.8625 46.7276 33.7862 45.9151C33.7333 45.3689 33.757 44.8179 33.8566 44.2783C33.9102 43.8566 34.1215 43.4708 34.448 43.1987C34.7746 42.9265 35.1922 42.7882 35.6166 42.8116C36.57 42.8116 37.1918 43.3015 37.4353 44.2372C37.4718 44.3785 37.4954 44.5229 37.5057 44.6684C37.5614 45.4252 37.3532 46.3756 37.7374 46.8831C38.0806 47.3377 39.0838 47.2644 39.7731 47.4961C44.7011 49.1623 47.919 52.4828 49.3211 57.5076C49.3545 57.6476 49.379 57.7897 49.3944 57.9329C49.3906 57.9828 49.3807 58.032 49.3651 58.0795Z"
+                            fill="#DA9500" />
+                        <path
+                            d="M35.5399 65.63C30.8192 65.63 26.1005 65.63 21.3837 65.63C20.9472 65.6507 20.5101 65.6052 20.0872 65.4951C19.6711 65.3904 19.3095 65.1335 19.0737 64.775C18.838 64.4165 18.7454 63.9826 18.8142 63.5591C18.841 63.1325 19.0222 62.7302 19.324 62.4274C19.6257 62.1245 20.0273 61.9419 20.4539 61.9135C20.7465 61.8889 21.0404 61.882 21.3339 61.893H49.9777C50.1948 61.893 50.4148 61.893 50.6348 61.893C51.6996 61.9604 52.471 62.685 52.518 63.653C52.5649 64.621 51.7846 65.4951 50.6876 65.6036C50.3947 65.6232 50.101 65.6281 49.8076 65.6183L35.5399 65.63Z"
+                            fill="#DA9500" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_157_452">
+                            <rect width="71.3588" height="90" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <h4 class="font-poppins font-semibold text-2xl lg:text-[30px] text-[#3F3F3F]">Easy ordering process</h4>
+                <p class="font-poppins font-normal text-base lg:text-xl text-[#676767]">Lorem ipsum dolor sit amet
+                    consectetur.
+                    Ornare massa nunc nibh tristique.</p>
+            </div>
+            <div class="flex flex-col space-y-4 p-4 lg:p-10 hover:bg-[#E5AF1050] rounded-xl" data-aos="zoom-in"
+                data-aos-duration="1000" data-aos-delay="600" data-aos-mobile="true">
+                <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_157_441)">
+                        <path
+                            d="M89.9621 36.271C89.6704 38.0304 89.4611 39.7993 89.0753 41.5446C85.9916 55.3897 74.0941 66.0263 59.9456 67.6329C42.9392 69.5664 27.3911 58.9838 22.969 42.4643C18.8173 26.928 26.6808 10.1145 41.295 3.30485C44.9818 1.55409 48.9538 0.481623 53.0207 0.13878C53.1905 0.109608 53.3568 0.0631047 53.517 0L58.2708 0C59.4234 0.171711 60.5784 0.322252 61.7286 0.515133C75.1103 2.74737 86.1398 13.1488 89.0753 26.3447C89.4681 28.1065 89.6728 29.9083 89.9621 31.6912V36.271ZM53.3477 16.91V36.5509H73.0051V31.2843H58.5696V16.91H53.3477Z"
+                            fill="#DA9500" />
+                        <path d="M26.1424 67.4636L10.0392 83.6796L6.40039 80.029L22.4636 63.7988L26.1424 67.4636Z"
+                            fill="#DA9500" />
+                        <path d="M36.5066 69.8792L40.0796 73.3886L26.1758 87.4219L22.5957 83.863L36.5066 69.8792Z"
+                            fill="#DA9500" />
+                        <path
+                            d="M6.07811 67.4117L2.5498 63.9281C7.18208 59.2582 11.8253 54.5812 16.4796 49.8972L20.0079 53.3996L6.07811 67.4117Z"
+                            fill="#DA9500" />
+                        <path
+                            d="M3.64121 50.0031L0 46.3831L12.6713 33.6365C13.8968 34.8549 15.1317 36.0781 16.289 37.2259L3.64121 50.0031Z"
+                            fill="#DA9500" />
+                        <path d="M43.7109 90.0001L40.0674 86.4106L52.7952 73.624L56.3846 77.2017L43.7109 90.0001Z"
+                            fill="#DA9500" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_157_441">
+                            <rect width="89.9624" height="90" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <h4 class="font-poppins font-semibold text-2xl lg:text-[30px] text-[#3F3F3F]">Fast delivery within 20
+                    min</h4>
+                <p class="font-poppins font-normal text-base lg:text-xl text-[#676767]">Lorem ipsum dolor sit amet
+                    consectetur.
+                    Ornare massa nunc nibh tristique.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-[#DA9500] to-[#DA5400] text-white" data-aos="fade-up" data-aos-duration="1200"
+        data-aos-mobile="true">
+        <div class="container mx-auto px-8 py-12 2xl:max-w-[1600px] mx-auto">
+            <!-- Main footer content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
+                <!-- Company Info -->
+                <div class="lg:col-span-3">
+                    <h2 class="text-2xl md:text-[48px] font-medium mb-4 font-poppins">HALAL MEAT</h2>
+                    <div class="space-y-2 text-sm opacity-90">
+                        <div class="flex items-start gap-2">
+                            <span class="font-medium">WhatsApp:</span>
+                            <span>+62 856 9999 999</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="font-medium">Email:</span>
+                            <span>halalmeat@company.com</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="font-medium">Address:</span>
+                            <span>Lorem Ipsum Street Block A Number 08, Jakarta, Indonesia, 12345</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div class="lg:col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Menu</h3>
+                    <ul class="space-y-2 text-sm opacity-90">
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">Sale</a></li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">New Arrivals</a></li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">Frozen Meat</a></li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">Frozen Vegetables</a>
+                        </li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">Casual Meat</a></li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">Casual Vegetables</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Get Help -->
+                <div class="lg:col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Get Help</h3>
+                    <ul class="space-y-2 text-sm opacity-90">
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">FAQ</a></li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">Customer Service</a>
+                        </li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">Refund and Return</a>
+                        </li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">Terms and
+                                Conditions</a>
+                        </li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">Shipping</a></li>
+                    </ul>
+                </div>
+
+                <!-- Account -->
+                <div class="lg:col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Account</h3>
+                    <ul class="space-y-2 text-sm opacity-90">
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">My Account</a></li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">My Orders</a></li>
+                        <li><a href="#" class="hover:opacity-100 transition-opacity duration-200">Vouchers and
+                                Discounts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright bar -->
+        <div class="border-t border-white/20">
+            <div class="container mx-auto px-4 py-4 2xl:max-w-[1600px] mx-auto">
+                <p class="text-center text-sm opacity-75">All Right Reserved - 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./src/interactivity.js"></script>
+    <script>
+        // Initialize AOS with better mobile support
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            mirror: false,
+            offset: 50,
+            delay: 0,
+            anchorPlacement: 'top-bottom',
+            // Disable animations on mobile for better performance
+            disable: window.innerWidth < 768,
+            // Re-enable on resize
+            startEvent: 'DOMContentLoaded'
+        });
+
+        // Re-initialize AOS on window resize for responsive behavior
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768) {
+                AOS.refresh();
+            }
+        });
+
+        // Add mobile-specific animations
+        function addMobileAnimations() {
+            if (window.innerWidth < 768) {
+                // Add simple fade-in animations for mobile
+                const elements = document.querySelectorAll('[data-aos-mobile="true"]');
+                elements.forEach((element, index) => {
+                    element.style.opacity = '0';
+                    element.style.transform = 'translateY(20px)';
+                    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+                    setTimeout(() => {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }, index * 150); // Faster animation for mobile
+                });
+            }
+        }
+
+        // Call mobile animations after page load
+        window.addEventListener('load', addMobileAnimations);
+
+        // Also call on DOMContentLoaded for faster response
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(addMobileAnimations, 100);
+        });
+    </script>
 </body>
 
 </html>
