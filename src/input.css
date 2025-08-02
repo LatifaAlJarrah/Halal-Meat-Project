@@ -493,6 +493,24 @@
         filter: drop-shadow(50px 50px 50px rgba(68, 68, 68, 0.25));
       }
     }
+
+    /* Large screen optimizations */
+    @media (min-width: 1670px) {
+      .hero-image-large {
+        position: absolute;
+        right: -12rem;
+        top: -17rem;
+        width: 125rem;
+        height: 62.5rem;
+        object-fit: cover;
+        z-index: 20;
+      }
+    }
+    @media (min-width: 1689px) and (max-width: 1720px) {
+     .aside {
+       width: 570px;
+     }
+    }
     @keyframes floatUpDown {
   0%, 100% {
     transform: translateY(0);

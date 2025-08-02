@@ -10,7 +10,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="2xl:max-w-[1600px] mx-auto">
+<body>
     <!-- Header -->
     <header class="relative shadow-[0_4px_4px_0_rgba(0,0,0,0.04)] mb-10" data-aos="fade-down" data-aos-duration="1000">
         <div class="flex items-center justify-between px-6 lg:px-16 py-4 2xl:max-w-[1600px] mx-auto">
@@ -99,7 +99,7 @@
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="xl:hidden fixed inset-0 z-50 hidden flex items-center justify-center">
+        <div id="mobile-menu" class="xl:hidden fixed inset-0 z-50 hidden  items-center justify-center">
             <div
                 class="bg-white shadow-2xl rounded-lg w-96 max-w-[90%] max-h-[90%] overflow-y-auto scrollbar-hide transform transition-transform duration-300 ease-in-out fixed">
                 <div class="flex justify-between items-center p-6 border-b">
@@ -193,8 +193,8 @@
     </header>
 
     <!-- Contact Section -->
-    <section class="py-16 px-8 lg:px-12">
-        <div class="max-w-6xl mx-auto">
+    <section class="py-16 px-8 lg:px-12 2xl:max-w-[1600px] mx-auto">
+        <div>
             <!-- Contact Header -->
             <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
                 <h1 class="text-4xl lg:text-6xl font-extrabold text-[#2C2F24] font-abhaya-libre mb-6">Contact Us</h1>
@@ -205,54 +205,55 @@
                 <!-- Contact Information -->
                 <div class="space-y-8 flex flex-col justify-center" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
                     <!-- Contact Info -->
-                    <div class="bg-gradient-to-br from-[#E28A25] to-[#D17A15] text-white p-8 lg:p-12 rounded-2xl">
-                        <h2 class="text-2xl lg:text-3xl font-bold mb-8">Get in Touch</h2>
+                    <div class="bg-gradient-to-r from-[#F1C74E] to-[#DA5400] text-white p-8 lg:p-12 rounded-2xl">
+                        <h2 class="text-2xl lg:text-3xl font-semibold font-poppins mb-8">Get in Touch</h2>
 
                         <div class="space-y-6">
                             <div class="flex items-start space-x-4">
                                 <div
                                     class="flex-shrink-0 w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                                        </path>
-                                    </svg>
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M26.9596 21.5135L20.6927 15.8155C20.3966 15.5459 20.0073 15.402 19.607 15.4144C19.2068 15.4268 18.8271 15.5944 18.5482 15.8818L14.859 19.6758C13.971 19.5062 12.1858 18.9497 10.3481 17.1167C8.51044 15.2774 7.95389 13.4876 7.78894 12.6057L11.5799 8.91498C11.8673 8.63614 12.0349 8.25642 12.0473 7.85618C12.0596 7.45594 11.9158 7.06659 11.6462 6.77053L5.94973 0.505192C5.68 0.2082 5.30512 0.0280527 4.90471 0.00300901C4.5043 -0.0220347 4.1099 0.109999 3.80527 0.371067L0.459852 3.24011C0.193315 3.50761 0.0342273 3.86364 0.012768 4.24065C-0.010357 4.62607 -0.451273 13.7558 6.62806 20.8382C12.804 27.0126 20.5401 27.4643 22.6706 27.4643C22.9821 27.4643 23.1732 27.4551 23.2241 27.452C23.6008 27.4297 23.9562 27.2701 24.2231 27.0034L27.0906 23.6564C27.3527 23.3527 27.4857 22.9587 27.4612 22.5583C27.4367 22.1579 27.2567 21.7829 26.9596 21.5135Z"
+                                        fill="#E48F26" />
+                                </svg>
+
                                 </div>
                                 <div>
-                                    <h3 class="font-semibold text-lg mb-1">Phone</h3>
-                                    <p class="text-white text-opacity-90">+62 856 9999 999</p>
+                                    <h3 class="font-medium font-poppins text-xl mb-1">Phone</h3>
+                                    <p class="font-medium font-poppins text-lg">+62 856 9999 999</p>
                                 </div>
                             </div>
 
                             <div class="flex items-start space-x-4">
                                 <div
                                     class="flex-shrink-0 w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                        </path>
-                                    </svg>
+                                <svg width="27" height="21" viewBox="0 0 27 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.5413 0.166687H4.45801C3.43029 0.166687 2.44467 0.574945 1.71797 1.30165C0.991266 2.02835 0.583008 3.01397 0.583008 4.04169V16.9584C0.583008 17.9861 0.991266 18.9717 1.71797 19.6984C2.44467 20.4251 3.43029 20.8334 4.45801 20.8334H22.5413C23.5691 20.8334 24.5547 20.4251 25.2814 19.6984C26.0081 18.9717 26.4163 17.9861 26.4163 16.9584V4.04169C26.4163 3.01397 26.0081 2.02835 25.2814 1.30165C24.5547 0.574945 23.5691 0.166687 22.5413 0.166687ZM21.6759 2.75002L13.4997 8.88544L5.32342 2.75002H21.6759ZM22.5413 18.25H4.45801C4.11544 18.25 3.7869 18.1139 3.54466 17.8717C3.30243 17.6295 3.16634 17.3009 3.16634 16.9584V4.3646L12.7247 11.5334C12.9483 11.701 13.2202 11.7917 13.4997 11.7917C13.7792 11.7917 14.0511 11.701 14.2747 11.5334L23.833 4.3646V16.9584C23.833 17.3009 23.6969 17.6295 23.4547 17.8717C23.2125 18.1139 22.8839 18.25 22.5413 18.25Z"
+                                        fill="#E48F26" />
+                                </svg>
+
                                 </div>
                                 <div>
-                                    <h3 class="font-semibold text-lg mb-1">Email</h3>
-                                    <p class="text-white text-opacity-90">halalmeat@company.com</p>
+                                    <h3 class="font-medium font-poppins text-xl mb-1">Email</h3>
+                                    <p class="font-medium font-poppins text-lg">halalmeat@company.com</p>
                                 </div>
                             </div>
 
                             <div class="flex items-start space-x-4">
                                 <div
                                     class="flex-shrink-0 w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                        </path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
+                                <svg width="19" height="27" viewBox="0 0 19 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.49967 12.8541C8.64325 12.8541 7.8219 12.5139 7.21631 11.9083C6.61072 11.3028 6.27051 10.4814 6.27051 9.62498C6.27051 8.76855 6.61072 7.9472 7.21631 7.34161C7.8219 6.73603 8.64325 6.39581 9.49967 6.39581C10.3561 6.39581 11.1775 6.73603 11.783 7.34161C12.3886 7.9472 12.7288 8.76855 12.7288 9.62498C12.7288 10.049 12.6453 10.4689 12.483 10.8607C12.3208 11.2525 12.0829 11.6085 11.783 11.9083C11.4832 12.2082 11.1272 12.4461 10.7354 12.6083C10.3436 12.7706 9.92374 12.8541 9.49967 12.8541ZM9.49967 0.583313C7.10168 0.583313 4.80189 1.53591 3.10625 3.23156C1.41061 4.9272 0.458008 7.22698 0.458008 9.62498C0.458008 16.4062 9.49967 26.4166 9.49967 26.4166C9.49967 26.4166 18.5413 16.4062 18.5413 9.62498C18.5413 7.22698 17.5887 4.9272 15.8931 3.23156C14.1975 1.53591 11.8977 0.583313 9.49967 0.583313Z"
+                                        fill="#DA9500" />
+                                </svg>
+
                                 </div>
                                 <div>
-                                    <h3 class="font-semibold text-lg mb-1">Address</h3>
-                                    <p class="text-white text-opacity-90">Lorem Ipsum Street Block A Number 08, Jakarta,
+                                    <h3 class="font-medium font-poppins text-xl mb-1">Address</h3>
+                                    <p class="font-medium font-poppins text-lg">Lorem Ipsum Street Block A Number 08, Jakarta,
                                         Indonesia, 12345</p>
                                 </div>
                             </div>
@@ -260,20 +261,20 @@
                     </div>
 
                     <!-- Business Hours -->
-                    <div class="bg-gray-50 p-8 rounded-2xl">
-                        <h3 class="text-xl font-bold text-[#2C2F24] mb-6">Business Hours</h3>
+                    <div class="bg-[#E9E9E9] p-8 rounded-2xl">
+                        <h3 class="text-xl font-semibold font-poppins text-black mb-6">Business Hours</h3>
                         <div class="space-y-3">
                             <div class="flex justify-between">
-                                <span class="text-[#414536]">Monday - Friday</span>
-                                <span class="font-semibold text-[#2C2F24]">8:00 AM - 8:00 PM</span>
+                                <span class="text-black font-poppins font-medium text-xl">Monday - Friday</span>
+                                <span class="text-black font-poppins font-medium text-xl">8:00 AM - 8:00 PM</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-[#414536]">Saturday</span>
-                                <span class="font-semibold text-[#2C2F24]">9:00 AM - 6:00 PM</span>
+                                <span class="text-black font-poppins font-medium text-xl">Saturday</span>
+                                <span class="text-black font-poppins font-medium text-xl">9:00 AM - 6:00 PM</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-[#414536]">Sunday</span>
-                                <span class="font-semibold text-[#2C2F24]">10:00 AM - 4:00 PM</span>
+                                <span class="text-black font-poppins font-medium text-xl">Sunday</span>
+                                <span class="text-black font-poppins font-medium text-xl">10:00 AM - 4:00 PM</span>
                             </div>
                         </div>
                     </div>
@@ -330,7 +331,7 @@
                                     class="text-[#E28A25]">Terms and Conditions</a></label>
                         </div>
                         <button type="submit"
-                            class="w-full bg-[#E28A25] text-white font-semibold py-4 px-8 rounded-lg hover:bg-[#D17A15] transition-colors duration-300 transform hover:scale-105">
+                            class="w-full bg-linear-to-r from-[#F1C74E] to-[#DA5400] text-white font-semibold py-4 px-8 rounded-lg hover:bg-[#D17A15] transition-colors duration-300 transform hover:scale-105">
                             Send Message
                         </button>
                     </form>
@@ -340,7 +341,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-br from-[#DA9500] to-[#DA5400] text-white" data-aos="fade-up" data-aos-duration="1200"
+    <footer class="bg-gradient-to-br from-[#DA9500] to-[#DA5400] text-white bottom-0" data-aos="fade-up" data-aos-duration="1200"
         data-aos-mobile="true">
         <div class="container mx-auto px-8 py-12 2xl:max-w-[1600px] mx-auto">
             <!-- Main footer content -->
